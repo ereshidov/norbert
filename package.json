@@ -1,0 +1,30 @@
+{
+  "name": "openai-tg-bot",
+  "type": "commonjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tsc",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=cjs",
+    "start": "node dist/index.js",
+    "dev:tsc": "tsc --watch --preserveWatchOutput",
+    "dev:node": "node --watch dist/index.js",
+    "dev:esbuild": "npm run build --watch",
+    "dev": "run-p dev:*"
+  },
+  "author": "ereshidov",
+  "license": "ISC",
+  "dependencies": {
+    "@cfworker/web": "^1.14.0",
+    "@langchain/openai": "^0.0.16",
+    "@types/node": "^20.11.24",
+    "cfworker-middleware-telegraf": "^2.0.2",
+    "dotenv": "^16.4.5",
+    "esbuild": "^0.20.1",
+    "langchain": "^0.1.25",
+    "npm-run-all": "^4.1.5",
+    "telegraf": "^4.16.3",
+    "typescript": "^5.3.3"
+  }
+}
